@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
-import { Mail, Phone, MapPin, Send, Calendar, Clock, Briefcase, Heart } from "lucide-react"
+import { Mail, Phone, Send, Calendar, Clock, Briefcase, Heart } from "lucide-react"
 import emailjs from '@emailjs/browser';
 
 export function Contact() {
@@ -97,12 +97,6 @@ export function Contact() {
     },
   ]
 
-  const responseTime = [
-    { type: "Email", time: "Within 24 hours", icon: "📧" },
-    { type: "LinkedIn", time: "Within 12 hours", icon: "💼" },
-    { type: "Phone", time: "Same day", icon: "📞" },
-  ]
-
   return (
     <section
       id="contact"
@@ -111,10 +105,10 @@ export function Contact() {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent">
-            Let's Connect & Collaborate
+            Let&apos;s Connect &amp; Collaborate
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Ready to discuss your next DevOps project or explore opportunities? I'm passionate about building scalable
+            Ready to discuss your next DevOps project or explore opportunities? I&apos;m passionate about building scalable
             infrastructure solutions and would love to hear about your challenges and goals.
           </p>
         </div>
@@ -153,8 +147,6 @@ export function Contact() {
               ))}
             </div>
 
-            {/* Response Time */}
-           
             {/* Current Status */}
             <Card className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950/20 dark:to-blue-950/20 border-green-200 dark:border-green-800">
               <CardHeader>
@@ -181,7 +173,7 @@ export function Contact() {
               <CardHeader>
                 <CardTitle className="text-2xl">Send Me a Message</CardTitle>
                 <p className="text-muted-foreground">
-                  Whether you have a job opportunity, project idea, or just want to connect, I'd love to hear from you!
+                  Whether you have a job opportunity, project idea, or just want to connect, I&apos;d love to hear from you!
                 </p>
               </CardHeader>
               <CardContent>
@@ -240,7 +232,7 @@ export function Contact() {
                     <label className="text-sm font-medium mb-2 block">Message *</label>
                     <Textarea
                       name="message"
-                      placeholder="Tell me about the opportunity, project requirements, or what you'd like to discuss..."
+                      placeholder="Tell me about the opportunity, project requirements, or what you&apos;d like to discuss..."
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
@@ -264,7 +256,7 @@ export function Contact() {
 
         {/* Availability Section */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-8">What I'm Looking For</h3>
+          <h3 className="text-3xl font-bold text-center mb-8">What I&apos;m Looking For</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {availability.map((item, index) => (
               <Card
@@ -290,7 +282,7 @@ export function Contact() {
             <CardContent className="pt-8">
               <h3 className="text-2xl font-bold mb-4">Ready to Build Something Amazing Together?</h3>
               <p className="text-muted-foreground mb-6 text-lg">
-                I'm excited about opportunities to contribute to innovative projects and work with talented teams. Let's
+                I&apos;m excited about opportunities to contribute to innovative projects and work with talented teams. Let&apos;s
                 discuss how my DevOps and cloud expertise can help achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-0 justify-center">

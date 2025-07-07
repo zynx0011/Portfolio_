@@ -199,10 +199,10 @@ export function About() {
           <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/50 dark:to-purple-950/50 border-2 border-primary/20">
             <CardContent className="pt-8">
               <blockquote className="text-2xl font-medium text-foreground mb-6 leading-relaxed">
-                "Infrastructure is not just about servers and code—it's about
+                &quot;Infrastructure is not just about servers and code—it&apos;s about
                 creating reliable, scalable foundations that enable teams to
                 innovate without limits while maintaining security and
-                performance excellence."
+                performance excellence.&quot;
               </blockquote>
               <cite className="text-primary font-bold text-lg">
                 - Kunal Nachan
@@ -217,8 +217,8 @@ export function About() {
             Interests & Passions Beyond Tech
           </h3>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            When I'm not architecting cloud solutions or optimizing pipelines,
-            you'll find me exploring:
+            When I&apos;m not architecting cloud solutions or optimizing pipelines,
+            you&apos;ll find me exploring:
           </p>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {interests.map((interest, index) => (
@@ -241,7 +241,7 @@ export function About() {
                 Ready to Build Something Amazing?
               </h4>
               <p className="text-muted-foreground mb-6">
-                Let's discuss how my expertise in cloud infrastructure and
+                Let&apos;s discuss how my expertise in cloud infrastructure and
                 DevOps can help bring your vision to life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
