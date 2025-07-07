@@ -1,8 +1,19 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Server, Cloud, GitBranch, Shield, Target, Heart, Lightbulb, Users, Code, Database } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Server,
+  Cloud,
+  GitBranch,
+  Shield,
+  Target,
+  Heart,
+  Lightbulb,
+  Users,
+  Code,
+  Database,
+} from "lucide-react";
 
 export function About() {
   const highlights = [
@@ -17,62 +28,71 @@ export function About() {
     {
       icon: Server,
       title: "Kubernetes & Containerization",
-      description: "Advanced container orchestration with Docker, Kubernetes, Helm, and microservices architecture",
+      description:
+        "Advanced container orchestration with Docker, Kubernetes, Helm, and microservices architecture",
       color: "text-blue-500",
       bgColor: "bg-blue-50 dark:bg-blue-900/20",
     },
     {
       icon: GitBranch,
       title: "CI/CD & GitOps",
-      description: "Implementing robust pipelines with Jenkins, ArgoCD, and automated deployment strategies",
+      description:
+        "Implementing robust pipelines with Jenkins, ArgoCD, and automated deployment strategies",
       color: "text-green-500",
       bgColor: "bg-green-50 dark:bg-green-900/20",
     },
     {
       icon: Shield,
       title: "DevSecOps & Monitoring",
-      description: "Security-first approach with Prometheus, Grafana, and comprehensive observability solutions",
+      description:
+        "Security-first approach with Prometheus, Grafana, and comprehensive observability solutions",
       color: "text-purple-500",
       bgColor: "bg-purple-50 dark:bg-purple-900/20",
     },
     {
       icon: Code,
       title: "Infrastructure as Code",
-      description: "Terraform, CloudFormation, and automated infrastructure provisioning and management",
+      description:
+        "Terraform, CloudFormation, and automated infrastructure provisioning and management",
       color: "text-indigo-500",
       bgColor: "bg-indigo-50 dark:bg-indigo-900/20",
     },
     {
       icon: Database,
       title: "Database & Storage",
-      description: "Experience with MySQL, MongoDB, AWS RDS, DynamoDB, and data management solutions",
+      description:
+        "Experience with MySQL, MongoDB, AWS RDS, DynamoDB, and data management solutions",
       color: "text-teal-500",
       bgColor: "bg-teal-50 dark:bg-teal-900/20",
     },
-  ]
+  ];
 
   const personalValues = [
     {
       icon: Target,
       title: "Goal-Oriented Professional",
-      description: "Focused on delivering scalable, reliable infrastructure solutions that drive business success",
+      description:
+        "Focused on delivering scalable, reliable infrastructure solutions that drive business success",
     },
     {
       icon: Heart,
       title: "Passionate Continuous Learner",
-      description: "Constantly exploring cutting-edge technologies and DevOps methodologies to stay ahead",
+      description:
+        "Constantly exploring cutting-edge technologies and DevOps methodologies to stay ahead",
     },
     {
       icon: Lightbulb,
       title: "Creative Problem Solver",
-      description: "Innovative approach to complex infrastructure challenges and automation opportunities",
+      description:
+        "Innovative approach to complex infrastructure challenges and automation opportunities",
     },
     {
       icon: Users,
       title: "Collaborative Team Player",
-      description: "Strong communication skills with experience in cross-functional team collaboration",
+      description:
+        "Strong communication skills with experience in cross-functional team collaboration",
     },
-  ]
+  ];
 
   const interests = [
     "🚀 Space Technology & Innovation",
@@ -85,7 +105,7 @@ export function About() {
     "🌱 Sustainable Technology",
     "🔬 Research & Development",
     "🎨 UI/UX Design Principles",
-  ]
+  ];
 
   return (
     <section
@@ -102,13 +122,19 @@ export function About() {
               🎓 Computer Science Graduate & Cloud Engineering Specialist
             </p>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Recent graduate from <span className="font-semibold text-blue-600">G H Raisoni University</span> with
-              exceptional academic performance (SGPA: 9.50/10). Specialized in cloud technologies, containerization, and
-              DevOps practices with hands-on experience building production-ready infrastructure solutions.
+              Recent graduate from{" "}
+              <span className="font-semibold text-blue-600">
+                G H Raisoni University
+              </span>{" "}
+              with exceptional academic performance (SGPA: 9.50/10). Specialized
+              in cloud technologies, containerization, and DevOps practices with
+              hands-on experience building production-ready infrastructure
+              solutions.
             </p>
             <p className="text-lg text-muted-foreground">
-              Passionate about creating automated, scalable, and secure systems that empower development teams to focus
-              on innovation while ensuring robust, reliable infrastructure foundations.
+              Passionate about creating automated, scalable, and secure systems
+              that empower development teams to focus on innovation while
+              ensuring robust, reliable infrastructure foundations.
             </p>
           </div>
         </div>
@@ -123,16 +149,22 @@ export function About() {
             >
               <CardHeader>
                 <div className="flex items-center space-x-4">
-                  <div className={`p-3 rounded-full ${highlight.bgColor} border`}>
+                  <div
+                    className={`p-3 rounded-full ${highlight.bgColor} border`}
+                  >
                     <highlight.icon
                       className={`h-8 w-8 ${highlight.color} group-hover:scale-110 transition-transform duration-300`}
                     />
                   </div>
-                  <CardTitle className="text-lg font-bold">{highlight.title}</CardTitle>
+                  <CardTitle className="text-lg font-bold">
+                    {highlight.title}
+                  </CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed">{highlight.description}</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  {highlight.description}
+                </p>
               </CardContent>
             </Card>
           ))}
@@ -153,7 +185,9 @@ export function About() {
                 <CardContent className="pt-8 pb-6">
                   <value.icon className="h-12 w-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
                   <h4 className="font-bold text-lg mb-3">{value.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {value.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -165,10 +199,14 @@ export function About() {
           <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/50 dark:to-purple-950/50 border-2 border-primary/20">
             <CardContent className="pt-8">
               <blockquote className="text-2xl font-medium text-foreground mb-6 leading-relaxed">
-                "Infrastructure is not just about servers and code—it's about creating reliable, scalable foundations
-                that enable teams to innovate without limits while maintaining security and performance excellence."
+                "Infrastructure is not just about servers and code—it's about
+                creating reliable, scalable foundations that enable teams to
+                innovate without limits while maintaining security and
+                performance excellence."
               </blockquote>
-              <cite className="text-primary font-bold text-lg">- Kunal Nachan</cite>
+              <cite className="text-primary font-bold text-lg">
+                - Kunal Nachan
+              </cite>
             </CardContent>
           </Card>
         </div>
@@ -179,7 +217,8 @@ export function About() {
             Interests & Passions Beyond Tech
           </h3>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            When I'm not architecting cloud solutions or optimizing pipelines, you'll find me exploring:
+            When I'm not architecting cloud solutions or optimizing pipelines,
+            you'll find me exploring:
           </p>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {interests.map((interest, index) => (
@@ -198,9 +237,12 @@ export function About() {
         <div className="mt-16 text-center">
           <Card className="max-w-2xl mx-auto bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20">
             <CardContent className="pt-8">
-              <h4 className="text-2xl font-bold mb-4">Ready to Build Something Amazing?</h4>
+              <h4 className="text-2xl font-bold mb-4">
+                Ready to Build Something Amazing?
+              </h4>
               <p className="text-muted-foreground mb-6">
-                Let's discuss how my expertise in cloud infrastructure and DevOps can help bring your vision to life.
+                Let's discuss how my expertise in cloud infrastructure and
+                DevOps can help bring your vision to life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Badge variant="outline" className="py-2 px-4">
@@ -215,5 +257,5 @@ export function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
