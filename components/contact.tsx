@@ -44,7 +44,7 @@ export function Contact() {
       )
       setResult({ type: 'success', message: 'Message sent successfully! I will get back to you soon.' })
       setFormData({ name: '', email: '', company: '', subject: '', message: '' })
-    } catch (err) {
+    } catch {
       setResult({ type: 'error', message: 'Failed to send message. Please try again later or email me directly.' })
     } finally {
       setLoading(false)

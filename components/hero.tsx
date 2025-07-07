@@ -50,8 +50,8 @@ export function Hero() {
     <div className="w-full h-40 sm:h-48 md:h-56 rounded-b-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 shadow-lg flex flex-col items-center justify-center animate-gradient-shift relative">
       {/* Quote Text */}
       <span className="text-lg sm:text-xl md:text-2xl font-semibold text-white text-center drop-shadow-lg opacity-90 mb-2">
-        "Success is not the key to happiness. <br />
-        Happiness is the key to success."
+        &quot;Success is not the key to happiness. <br />
+        Happiness is the key to success.&quot;
       </span>
       
       {/* Social Icons - Bottom Right of the banner */}
@@ -224,7 +224,7 @@ export function Hero() {
             >
               <Link href="#contact">
                 <Mail className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                Let's Connect & Collaborate
+                Let&apos;s Connect &amp; Collaborate
               </Link>
             </Button>
             <Button

@@ -250,9 +250,9 @@ export function Education() {
               <BookOpen className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-4">Continuous Learning Philosophy</h3>
               <blockquote className="text-lg text-muted-foreground mb-4 leading-relaxed italic">
-                "Education is not just about degrees and certifications—it's about building a foundation for lifelong
+                &quot;Education is not just about degrees and certifications—it&apos;s about building a foundation for lifelong
                 learning and staying current with rapidly evolving technologies in the DevOps and cloud computing
-                landscape."
+                landscape.&quot;
               </blockquote>
               <div className="flex flex-wrap justify-center gap-3 mt-6">
                 <Badge variant="outline" className="py-2 px-4">

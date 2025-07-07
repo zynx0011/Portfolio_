@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CalendarDays, MapPin, Award, TrendingUp, Target } from "lucide-react"
+import { CalendarDays, MapPin } from "lucide-react"
 
 export function Experience() {
   const experiences = [
