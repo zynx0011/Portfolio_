@@ -238,7 +238,7 @@ export function Projects() {
             <CardContent className="pt-8">
               <h3 className="text-2xl font-bold mb-4">Interested in My Work?</h3>
               <p className="text-muted-foreground mb-6">
-                These projects represent just a portion of my DevOps and cloud engineering experience. I'm always
+                These projects represent just a portion of my DevOps and cloud engineering experience. I&apos;m always
                 working on new challenges and innovative solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -251,7 +251,7 @@ export function Projects() {
                 <Button variant="outline" asChild>
                   <Link href="#contact">
                     <Users className="h-4 w-4 mr-2" />
-                    Let's Collaborate
+                    Let&apos;s Collaborate
                   </Link>
                 </Button>
               </div>
