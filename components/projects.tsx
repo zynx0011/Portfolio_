@@ -1,7 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, Users } from "lucide-react"
+import { Github, Users } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Projects() {
   const projects = [
@@ -201,10 +202,12 @@ export function Projects() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative w-full h-48 overflow-hidden rounded-t-xl bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/50 dark:to-purple-950/50">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
+                    width={400}
+                    height={225}
+                    className="rounded-lg w-full h-48 object-cover mb-4"
                   />
                 </div>
                 <CardContent className="flex flex-col flex-1 p-6">

@@ -11,6 +11,7 @@ import {
   Calendar,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Hero() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -28,7 +29,7 @@ export function Hero() {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 2500);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   return (
     <section className="relative pt-47 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -50,7 +51,7 @@ export function Hero() {
     <div className="w-full h-40 sm:h-48 md:h-56 rounded-b-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 shadow-lg flex flex-col items-center justify-center animate-gradient-shift relative">
       {/* Quote Text */}
       <span className="text-lg sm:text-xl md:text-2xl font-semibold text-white text-center drop-shadow-lg opacity-90 mb-2">
-        &quot;The harder you work for something, <br /> the greater you’ll feel when you achieve it.&quot;
+        &quot;The harder you work for something, <br /> the greater you&apos;ll feel when you achieve it.&quot;
       </span>
       
       {/* Social Icons - Bottom Right of the banner */}
@@ -144,11 +145,14 @@ export function Hero() {
           {/* Profile Section with User Photo over Banner */}
           <div className="mb-8 relative animate-scale-in flex flex-col items-center" style={{ marginTop: '2.5rem' }}>
             <div className="w-44 h-44 mx-auto rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 p-1 animate-glow shadow-2xl relative z-20" style={{ marginTop: '-5.5rem' }}>
-              <img
+              <Image
                 src="/ui/kunalnachan.jpg"
                 alt="Kunal Nachan profile"
+                width={176}
+                height={176}
                 className="w-full h-full object-cover rounded-full border-4 border-background shadow-lg"
                 style={{ background: "#fff" }}
+                priority
               />
             </div>
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-green-500 w-8 h-8 rounded-full border-4 border-background flex items-center justify-center animate-pulse z-30">
