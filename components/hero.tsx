@@ -16,11 +16,11 @@ export function Hero() {
   const [currentRole, setCurrentRole] = useState(0);
   const roles = [
     "Cloud Engineer",
-    "DevOps Enthusiast",
-    "Kubernetes Expert",
-    "AWS Specialist",
-    "GitOps Advocate",
-    "Infrastructure Automation Expert",
+    "DevOps Engineer",
+    "Kubernetes Explorer",
+    "AWS Cloud Engineer",
+    "Quick Learner",
+    "Infrastructure Automation",
   ];
 
   useEffect(() => {
@@ -50,14 +50,13 @@ export function Hero() {
     <div className="w-full h-40 sm:h-48 md:h-56 rounded-b-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 shadow-lg flex flex-col items-center justify-center animate-gradient-shift relative">
       {/* Quote Text */}
       <span className="text-lg sm:text-xl md:text-2xl font-semibold text-white text-center drop-shadow-lg opacity-90 mb-2">
-        &quot;Success is not the key to happiness. <br />
-        Happiness is the key to success.&quot;
+        &quot;The harder you work for something, <br /> the greater you’ll feel when you achieve it.&quot;
       </span>
       
       {/* Social Icons - Bottom Right of the banner */}
       <div className="flex justify-end space-x-2 absolute bottom-4 right-4 animate-fade-in-up">
         <Link
-          href="https://github.com/kunalnachan"
+          href="https://github.com/zynx0011"
           className="text-white/80 hover:text-white transition-all duration-300 hover:scale-125 group animate-float"
           style={{ animationDelay: "0.1s" }}
         >
@@ -245,7 +244,7 @@ export function Hero() {
             style={{ animationDelay: "0.9s" }}
           >
             <Link
-              href="https://github.com/kunalnachan"
+              href="https://github.com/zynx0011"
               className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-125 group animate-float"
               style={{ animationDelay: "0.1s" }}
             >
@@ -294,7 +293,7 @@ export function Hero() {
               className="text-center p-6 rounded-xl bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 border hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 animate-float"
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="text-3xl font-bold text-green-600 mb-2">4</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">4+</div>
               <div className="text-sm text-muted-foreground font-medium">
                 Certifications
               </div>

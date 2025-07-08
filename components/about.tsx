@@ -95,16 +95,11 @@ export function About() {
   ];
 
   const interests = [
-    "🚀 Space Technology & Innovation",
-    "🤖 Artificial Intelligence & ML",
     "📚 Technical Writing & Blogging",
     "🎮 Gaming & Interactive Tech",
     "🏃‍♂️ Fitness & Wellness",
-    "🎵 Music & Audio Technology",
-    "📱 Mobile App Development",
-    "🌱 Sustainable Technology",
+    "🎵 Music & Audio",
     "🔬 Research & Development",
-    "🎨 UI/UX Design Principles",
   ];
 
   return (
@@ -126,7 +121,7 @@ export function About() {
               <span className="font-semibold text-blue-600">
                 G H Raisoni University
               </span>{" "}
-              with exceptional academic performance (SGPA: 9.50/10). Specialized
+              with exceptional academic performance (CGPA: 9.1/10). Specialized
               in cloud technologies, containerization, and DevOps practices with
               hands-on experience building production-ready infrastructure
               solutions.
@@ -245,10 +240,10 @@ export function About() {
                 DevOps can help bring your vision to life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Badge variant="outline" className="py-2 px-4">
+                <Badge variant="outline" className="py-2 px-4 border-2 border-primary/30">
                   Available for Full-time Opportunities
                 </Badge>
-                <Badge variant="outline" className="py-2 px-4">
+                <Badge variant="outline" className="py-2 px-4 border-2 border-primary/30">
                   Open to Consulting Projects
                 </Badge>
               </div>

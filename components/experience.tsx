@@ -44,7 +44,7 @@ export function Experience() {
       title: "DevOps & Cloud Technology Mastery",
       company: "KodeKloud Academy & Self-Directed Learning",
       location: "Online Learning Platform",
-      period: "Jun 2022 - Dec 2023",
+      period: "Jun 2024 - Dec 2025",
       type: "Intensive Learning & Certification",
       description:
         "Comprehensive learning journey in cloud technologies and DevOps practices through structured courses, hands-on labs, and real-world project implementations. Gained industry-recognized certifications and practical expertise.",
@@ -69,12 +69,12 @@ export function Experience() {
       title: "Academic Excellence & Research",
       company: "G H Raisoni University",
       location: "Maharashtra, India",
-      period: "Aug 2020 - May 2024",
+      period: "Aug 2022 - May 2025",
       type: "Bachelor of Technology - Computer Science",
       description:
-        "Exceptional academic performance with SGPA of 9.50/10, focusing on software engineering, data structures, algorithms, and computer systems. Participated in technical projects and research activities.",
+        "Exceptional academic performance with CGPA of 9.1/10, focusing on software engineering, data structures, algorithms, and computer systems. Participated in technical projects and research activities.",
       achievements: [
-        "🎓 Achieved outstanding SGPA of 9.50/10 demonstrating academic excellence",
+        "🎓 Achieved outstanding CGPA of 9.1/10 demonstrating academic excellence",
         "💻 Completed major projects in web development, database management, and system design",
         "🔬 Participated in research activities related to cloud computing and distributed systems",
         "👥 Led technical teams in college projects and hackathons",

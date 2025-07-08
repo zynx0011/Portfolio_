@@ -12,7 +12,7 @@ export function Projects() {
         "Comprehensive full-stack notes application showcasing modern web development integrated with enterprise-grade DevOps practices. Features separate CI and CD pipelines, GitOps workflows, and comprehensive monitoring stack.",
       longDescription:
         "This project demonstrates end-to-end application development and deployment using modern DevOps practices. Built with React frontend and Node.js backend, the application is containerized and deployed on Kubernetes with complete automation.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/Notes.png",
       technologies: [
         "React",
         "Node.js",
@@ -41,7 +41,7 @@ export function Projects() {
         "Implemented zero-downtime deployments with rolling updates",
         "Created reusable Helm templates for future projects",
       ],
-      githubUrl: "https://github.com/kunalnachan",
+      githubUrl: "https://github.com/zynx0011/",
       liveUrl: null,
       category: "Full-Stack DevOps",
       status: "Production Ready",
@@ -54,7 +54,7 @@ export function Projects() {
         "Advanced microservices architecture deployed in Kubernetes with Istio service mesh, demonstrating production-grade cloud-native patterns, traffic management, and security policies.",
       longDescription:
         "This project showcases modern microservices deployment patterns using Kubernetes and Istio service mesh. Implements advanced traffic routing, security policies, and observability features typical of enterprise-grade applications.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/Micro.png",
       technologies: ["Kubernetes", "Minikube", "ArgoCD", "Istio", "Docker", "Linux", "GitOps", "Prometheus", "Jaeger"],
       features: [
         "🏗️ Microservices architecture with 5+ independent services",
@@ -72,7 +72,7 @@ export function Projects() {
         "Created comprehensive service mesh security policies",
         "Established distributed tracing for all microservices",
       ],
-      githubUrl: "https://github.com/kunalnachan",
+      githubUrl: "https://github.com/zynx0011",
       liveUrl: null,
       category: "Microservices",
       status: "Production Ready",
@@ -85,7 +85,7 @@ export function Projects() {
         "Comprehensive AWS cloud infrastructure automation using Terraform, featuring multi-environment deployments, auto-scaling, and cost optimization strategies.",
       longDescription:
         "Enterprise-grade AWS infrastructure automation project demonstrating best practices in cloud architecture, security, and cost management using Infrastructure as Code principles.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/Terraform.webp",
       technologies: ["AWS", "Terraform", "CloudFormation", "EC2", "EKS", "RDS", "S3", "Lambda", "CloudWatch"],
       features: [
         "☁️ Multi-tier AWS architecture with VPC, subnets, and security groups",
@@ -103,7 +103,7 @@ export function Projects() {
         "Automated infrastructure provisioning reducing setup time by 80%",
         "Implemented disaster recovery with cross-region backups",
       ],
-      githubUrl: "https://github.com/kunalnachan",
+      githubUrl: "https://github.com/zynx0011",
       liveUrl: null,
       category: "Cloud Infrastructure",
       status: "Production Ready",
@@ -116,7 +116,7 @@ export function Projects() {
         "Complete monitoring and observability solution for Kubernetes clusters featuring Prometheus, Grafana, AlertManager, and custom dashboards for comprehensive system insights.",
       longDescription:
         "Production-grade monitoring stack providing complete visibility into Kubernetes cluster health, application performance, and infrastructure metrics with automated alerting and custom dashboards.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/monitoring.png",
       technologies: [
         "Kubernetes",
         "Prometheus",
@@ -143,21 +143,21 @@ export function Projects() {
         "Implemented proactive alerting reducing downtime by 60%",
         "Established comprehensive SLA monitoring",
       ],
-      githubUrl: "https://github.com/kunalnachan",
-      liveUrl: "https://monitoring-demo.example.com",
+      githubUrl: "https://github.com/zynx0011",
       category: "Monitoring",
       status: "Production Ready",
       complexity: "Advanced",
     },
-  ].map((project) => ({
-    ...project,
-    image: "/demo-project.jpg",
-  }));
+  ]
+  // ].map((project) => ({
+  //   ...project,
+  //   image: "/demo-project.jpg",
+  // }));
 
   const projectStats = [
     { label: "Total Projects", value: "20+", icon: "🚀" },
-    { label: "Technologies Used", value: "25+", icon: "⚡" },
-    { label: "GitHub Stars", value: "150+", icon: "⭐" },
+    { label: "Technologies Used", value: "15+", icon: "⚡" },
+    { label: "GitHub Repositories", value: "20+", icon: "⭐" },
     { label: "Production Deployments", value: "10+", icon: "🌐" },
   ]
 
@@ -243,7 +243,7 @@ export function Projects() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild>
-                  <Link href="https://github.com/kunalnachan">
+                  <Link href="https://github.com/zynx0011">
                     <Github className="h-4 w-4 mr-2" />
                     View All Projects
                   </Link>

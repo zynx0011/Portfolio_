@@ -7,14 +7,14 @@ export function Achievements() {
     {
       icon: Trophy,
       title: "Academic Excellence",
-      description: "Achieved SGPA of 9.50/10 in B-Tech Computer Science",
+      description: "Achieved CGPA of 9.1/10 in B-Tech Computer Science",
       category: "Academic",
       color: "text-yellow-500",
     },
     {
       icon: Award,
       title: "Multiple Certifications",
-      description: "Completed 4 professional certifications in DevOps and Cloud technologies",
+      description: "Completed 4+ professional certifications in DevOps and Cloud technologies",
       category: "Certification",
       color: "text-blue-500",
     },
@@ -50,8 +50,8 @@ export function Achievements() {
 
   const stats = [
     { label: "Projects Completed", value: "15+", icon: "🚀" },
-    { label: "Technologies Mastered", value: "25+", icon: "⚡" },
-    { label: "Certifications Earned", value: "4", icon: "🏆" },
+    { label: "Technologies Used", value: "15+", icon: "⚡" },
+    { label: "Certifications Earned", value: "4+", icon: "🏆" },
     { label: "GitHub Repositories", value: "20+", icon: "📁" },
   ]
 

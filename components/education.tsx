@@ -9,9 +9,9 @@ export function Education() {
       field: "Computer Science Engineering",
       institution: "G H Raisoni University",
       location: "Maharashtra, India",
-      grade: "SGPA: 9.50 / 10",
+      grade: "CGPA: 9.1 / 10",
       percentage: "95%",
-      period: "2020 - 2024",
+      period: "2022 - 2025",
       description:
         "Exceptional academic performance with focus on software engineering, data structures, algorithms, and computer systems. Consistently ranked in top 5% of the class.",
       highlights: [
@@ -37,9 +37,8 @@ export function Education() {
       field: "Computer Science & Engineering",
       institution: "Y B Polytechnic",
       location: "Maharashtra, India",
-      grade: "CGPA: 7.8 / 10",
-      percentage: "78%",
-      period: "2017 - 2020",
+      grade: "Percentage: 78%",
+      period: "2019 - 2022",
       description:
         "Strong foundation in computer science fundamentals, programming concepts, and technical skills. Built solid groundwork for advanced studies.",
       highlights: [
@@ -64,54 +63,54 @@ export function Education() {
     {
       name: "KodeKloud Linux Certification",
       issuer: "KodeKloud",
-      date: "2023",
+      date: "2024",
       description: "Comprehensive Linux system administration and command-line proficiency",
       skills: ["Linux Administration", "Shell Scripting", "System Management", "Command Line"],
-      credentialId: "KK-LINUX-2023",
+      credentialId: "KK-LINUX-2024",
     },
     {
       name: "KodeKloud Docker Certification",
       issuer: "KodeKloud",
-      date: "2023",
+      date: "2024",
       description: "Container technology mastery including Docker fundamentals and advanced concepts",
       skills: ["Docker", "Containerization", "Image Management", "Docker Compose"],
-      credentialId: "KK-DOCKER-2023",
+      credentialId: "KK-DOCKER-2024",
     },
     {
       name: "KodeKloud Kubernetes Certification",
       issuer: "KodeKloud",
-      date: "2023",
+      date: "2024",
       description: "Kubernetes orchestration, cluster management, and cloud-native deployments",
       skills: ["Kubernetes", "Container Orchestration", "Cluster Management", "Cloud Native"],
-      credentialId: "KK-K8S-2023",
+      credentialId: "KK-K8S-2024",
     },
     {
       name: "Mastering Git & GitHub Training Program",
       issuer: "Professional Training Institute",
-      date: "2022",
+      date: "2025",
       description: "Advanced version control, collaboration workflows, and DevOps integration",
       skills: ["Git", "GitHub", "Version Control", "Collaboration", "DevOps"],
-      credentialId: "GIT-MASTER-2022",
+      credentialId: "GIT-MASTER-2025",
     },
   ]
 
   const academicAchievements = [
     {
       title: "Academic Excellence Award",
-      description: "Recognized for outstanding SGPA of 9.50/10 in Computer Science",
-      year: "2024",
+      description: "Recognized for outstanding CGPA of 9.1/10 in Computer Science",
+      year: "2025",    
       icon: Trophy,
     },
     {
       title: "Consistent High Performance",
       description: "Maintained top 5% ranking throughout the degree program",
-      year: "2020-2024",
+      year: "2022-2025",
       icon: TrendingUp,
     },
     {
       title: "Technical Project Leadership",
       description: "Led multiple successful technical projects and team collaborations",
-      year: "2022-2024",
+      year: "2022-2025",
       icon: Star,
     },
   ]

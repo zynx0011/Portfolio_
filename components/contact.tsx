@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Mail, Phone, Send, Calendar, Clock, Briefcase, Heart } from "lucide-react"
-import emailjs from '@emailjs/browser';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -26,24 +25,18 @@ export function Contact() {
     setLoading(true)
     setResult(null)
     try {
-      // Use environment variables for EmailJS credentials
-      const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-      const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
-      const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          company: formData.company,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        PUBLIC_KEY
-      )
-      setResult({ type: 'success', message: 'Message sent successfully! I will get back to you soon.' })
-      setFormData({ name: '', email: '', company: '', subject: '', message: '' })
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      const data = await response.json()
+      if (data.success) {
+        setResult({ type: 'success', message: 'Message sent successfully! I will get back to you soon.' })
+        setFormData({ name: '', email: '', company: '', subject: '', message: '' })
+      } else {
+        setResult({ type: 'error', message: 'Failed to send message. Please try again later or email me directly.' })
+      }
     } catch {
       setResult({ type: 'error', message: 'Failed to send message. Please try again later or email me directly.' })
     } finally {
@@ -113,10 +106,30 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16 ">
           {/* Contact Information */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
+             <div className="mb-6">
+              {/* Current Status */}
+             <Card className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950/20 dark:to-blue-950/20 border-green-200 dark:border-green-800">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-green-700 dark:text-green-400">
+                  <Calendar className="h-5 w-5" />
+                  Current Status
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="font-semibold text-green-700 dark:text-green-400">Available for Opportunities</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Actively seeking full-time DevOps Engineer positions and open to discussing exciting projects.
+                </p>
+              </CardContent>
+            </Card>
+             </div>
 
             {/* Contact Methods */}
             <div className="space-y-6 mb-8">
@@ -147,28 +160,12 @@ export function Contact() {
               ))}
             </div>
 
-            {/* Current Status */}
-            <Card className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950/20 dark:to-blue-950/20 border-green-200 dark:border-green-800">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-green-700 dark:text-green-400">
-                  <Calendar className="h-5 w-5" />
-                  Current Status
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="font-semibold text-green-700 dark:text-green-400">Available for Opportunities</span>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Actively seeking full-time DevOps Engineer positions and open to discussing exciting projects.
-                </p>
-              </CardContent>
-            </Card>
+           
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 mt-19">
+            
             <Card className="hover:shadow-xl transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-2xl">Send Me a Message</CardTitle>
