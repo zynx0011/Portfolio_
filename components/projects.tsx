@@ -217,14 +217,7 @@ export function Projects() {
                         Code
                       </Link>
                     </Button>
-                    {project.liveUrl && (
-                      <Button size="sm" className="flex-1" asChild>
-                        <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          Live
-                        </Link>
-                      </Button>
-                    )}
+                    
                   </div>
                 </CardContent>
               </Card>
