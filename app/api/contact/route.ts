@@ -1,26 +1,8 @@
-import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+// This API route is currently disabled. To enable contact form functionality, implement your preferred email sending logic here.
 
-export async function POST(req: NextRequest) {
-    const { name, email, company, subject, message } = await req.json();
-
-    const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-            user: process.env.GMAIL_USER,
-            pass: process.env.GMAIL_PASS,
-        },
+export async function POST() {
+    return new Response(JSON.stringify({ success: false, error: 'Email sending is disabled.' }), {
+        status: 501,
+        headers: { 'Content-Type': 'application/json' },
     });
-
-    try {
-        await transporter.sendMail({
-            from: `"${name}" <${email}>`,
-            to: process.env.MY_EMAIL,
-            subject: subject || "Contact Form Submission",
-            text: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nMessage: ${message}`,
-        });
-        return NextResponse.json({ success: true });
-    } catch (error: any) {
-        return NextResponse.json({ success: false, error: error.message }, { status: 500 });
-    }
 } 
