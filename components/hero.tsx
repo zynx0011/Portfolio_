@@ -32,7 +32,7 @@ export function Hero() {
   }, [roles.length]);
 
   return (
-    <section className="relative pt-47 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative pt-32 pb-16 px-2 sm:px-4 lg:px-8 overflow-hidden">
       
       {/* LinkedIn-style Banner as Background */}
       {/* <div className="absolute left-1/2 top-0 w-full max-w-3xl  -translate-x-1/2 z-10 flex flex-col items-center">
@@ -140,11 +140,11 @@ export function Hero() {
         <span className="text-sm">🧑‍💻</span>
       </div>
 
-      <div className="container mx-auto text-center relative z-20">
+      <div className="container mx-auto text-center relative z-20 px-2 sm:px-0">
         <div className="max-w-5xl mx-auto">
           {/* Profile Section with User Photo over Banner */}
-          <div className="mb-8 relative animate-scale-in flex flex-col items-center" style={{ marginTop: '2.5rem' }}>
-            <div className="w-44 h-44 mx-auto rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 p-1 animate-glow shadow-2xl relative z-20" style={{ marginTop: '-5.5rem' }}>
+          <div className="mb-8 relative animate-scale-in flex flex-col items-center" style={{ marginTop: '2rem' }}>
+            <div className="w-32 h-32 sm:w-44 sm:h-44 mx-auto rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 p-1 animate-glow shadow-2xl relative z-20" style={{ marginTop: '-4rem' }}>
               <Image
                 src="/ui/kunalnachan.jpg"
                 alt="Kunal Nachan profile"
@@ -173,11 +173,11 @@ export function Hero() {
           </div>
 
           {/* Main Title with Animation */}
-          <h1 className="text-5xl sm:text-7xl font-bold mb-6 mt-12 animate-fade-in-up">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 mt-8 sm:mt-12 animate-fade-in-up">
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_200%]">
               Kunal Nachan
             </span>
-            <div className="text-2xl sm:text-4xl mt-4 h-16 flex items-center justify-center">
+            <div className="text-lg sm:text-2xl md:text-4xl mt-2 sm:mt-4 h-12 sm:h-16 flex items-center justify-center">
               <span className="inline-block animate-fade-in-up text-primary font-semibold">
                 {roles[currentRole]}
               </span>
@@ -186,7 +186,7 @@ export function Hero() {
 
           {/* Enhanced Description */}
           <div
-            className="text-xl text-muted-foreground mb-8 -mt-5 max-w-4xl mx-auto leading-relaxed space-y-4 animate-fade-in-up"
+            className="text-base sm:text-xl text-muted-foreground mb-8 -mt-3 sm:-mt-5 max-w-4xl mx-auto leading-relaxed space-y-4 animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
           >
             <p className="text-2xl font-semibold text-foreground">
@@ -217,7 +217,7 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center -mt-5 mb-12 animate-fade-in-up"
+            className="flex flex-col sm:flex-row gap-4 justify-center -mt-3 sm:-mt-5 mb-10 sm:mb-12 animate-fade-in-up"
             style={{ animationDelay: "0.6s" }}
           >
             <Button
@@ -244,7 +244,7 @@ export function Hero() {
 
           {/* Social Links */}
           <div
-            className="flex justify-center space-x-8 mb-16 animate-fade-in-up"
+            className="flex justify-center space-x-6 sm:space-x-8 mb-10 sm:mb-16 animate-fade-in-up"
             style={{ animationDelay: "0.9s" }}
           >
             <Link
@@ -281,7 +281,7 @@ export function Hero() {
 
           {/* Enhanced Stats Grid */}
           <div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto animate-fade-in-up"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto animate-fade-in-up"
             style={{ animationDelay: "1.2s" }}
           >
             <div
