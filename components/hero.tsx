@@ -121,12 +121,7 @@ export function Hero() {
       >
         <span className="text-sm">🚀</span>
       </div>
-      <div
-        className="absolute top-40 left-40 w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center animate-float"
-        style={{ animationDelay: "3s" }}
-      >
-        <span className="text-sm">🚀</span>
-      </div>
+     
       <div
         className="absolute top-100 left-10 w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center animate-float"
         style={{ animationDelay: "3s" }}
@@ -140,7 +135,7 @@ export function Hero() {
         <span className="text-sm">🧑‍💻</span>
       </div>
 
-      <div className="container mx-auto text-center relative z-20 px-2 sm:px-0">
+      <div className="container mx-auto text-center relative z-20 mt-18 px-2 sm:px-0">
         <div className="max-w-5xl mx-auto">
           {/* Profile Section with User Photo over Banner */}
           <div className="mb-8 relative animate-scale-in flex flex-col items-center" style={{ marginTop: '2rem' }}>
