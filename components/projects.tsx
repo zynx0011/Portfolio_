@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import { Github, Users } from "lucide-react"
+
 import Link from "next/link"
 import Image from "next/image"
 
@@ -24,16 +26,15 @@ export function Projects() {
         "ArgoCD",
         "Prometheus",
         "Grafana",
-        "AWS",
       ],
       features: [
         "🔄 Separate CI and CD pipelines for modular DevOps control and flexibility",
-        "📦 Custom Helm charts for Kubernetes deployment with configurable parameters",
+        "📦 Custom Helm charts for Kubernetes deployment",
         "🚀 Jenkins CI pipelines for automated Docker builds and registry pushes",
         "🔄 ArgoCD GitOps continuous deployment with auto-sync capabilities",
+        "⚡ Auto-scaling configuration based on CPU and memory utilization",
         "📊 Comprehensive monitoring with Prometheus and Grafana for real-time metrics",
         "🛡️ DevSecOps implementation with RBAC, Kubernetes Secrets, and Pod Security Policies",
-        "⚡ Auto-scaling configuration based on CPU and memory utilization",
         "🔍 Centralized logging with ELK stack for debugging and analysis",
       ],
       achievements: [
@@ -42,7 +43,7 @@ export function Projects() {
         "Implemented zero-downtime deployments with rolling updates",
         "Created reusable Helm templates for future projects",
       ],
-      githubUrl: "https://github.com/zynx0011/",
+      githubUrl: "https://github.com/zynx0011/note-app-cd.git",
       liveUrl: null,
       category: "Full-Stack DevOps",
       status: "Production Ready",
@@ -58,22 +59,18 @@ export function Projects() {
       image: "/Micro.png",
       technologies: ["Kubernetes", "Minikube", "ArgoCD", "Istio", "Docker", "Linux", "GitOps", "Prometheus", "Jaeger"],
       features: [
-        "🏗️ Microservices architecture with 5+ independent services",
+        "🏗️ Microservices architecture with independent services",
         "🔄 GitOps workflows using ArgoCD for version-controlled deployments",
         "🌐 Istio Service Mesh for advanced traffic routing and load balancing",
-        "🛡️ mTLS encryption for secure inter-service communication",
-        "📊 Distributed tracing with Jaeger for request flow analysis",
         "🔍 Service mesh observability with Kiali dashboard",
-        "⚡ Circuit breaker patterns for fault tolerance",
-        "🎯 Canary deployments for safe production releases",
-      ],
+      ],  
       achievements: [
         "Implemented blue-green deployment strategy",
         "Achieved 50% reduction in service-to-service latency",
         "Created comprehensive service mesh security policies",
         "Established distributed tracing for all microservices",
       ],
-      githubUrl: "https://github.com/zynx0011",
+      githubUrl: "https://github.com/zynx0011/Pipeline.git",
       liveUrl: null,
       category: "Microservices",
       status: "Production Ready",
@@ -87,7 +84,7 @@ export function Projects() {
       longDescription:
         "Enterprise-grade AWS infrastructure automation project demonstrating best practices in cloud architecture, security, and cost management using Infrastructure as Code principles.",
       image: "/Terraform.webp",
-      technologies: ["AWS", "Terraform", "CloudFormation", "EC2", "EKS", "RDS", "S3", "Lambda", "CloudWatch"],
+      technologies: ["AWS", "Terraform", "CloudFormation", "EC2", "VPC", "RDS", "S3", "IAM", "Auto Scaling", "CloudWatch"],
       features: [
         "☁️ Multi-tier AWS architecture with VPC, subnets, and security groups",
         "🏗️ Infrastructure as Code using Terraform with modular design",
@@ -102,7 +99,6 @@ export function Projects() {
         "Reduced infrastructure costs by 40% through optimization",
         "Achieved 99.99% availability with multi-AZ deployment",
         "Automated infrastructure provisioning reducing setup time by 80%",
-        "Implemented disaster recovery with cross-region backups",
       ],
       githubUrl: "https://github.com/zynx0011",
       liveUrl: null,
@@ -123,32 +119,109 @@ export function Projects() {
         "Prometheus",
         "Grafana",
         "AlertManager",
-        "Helm",
-        "Jaeger",
-        "Fluentd",
-        "ElasticSearch",
       ],
       features: [
         "📊 Prometheus monitoring with custom metrics collection",
         "📈 Grafana dashboards for cluster and application monitoring",
         "🚨 AlertManager for intelligent alerting and notification routing",
-        "📝 Centralized logging with Fluentd and ElasticSearch",
-        "🔍 Distributed tracing integration with Jaeger",
         "⚡ Real-time performance monitoring and alerting",
-        "📱 Mobile-responsive dashboards for on-the-go monitoring",
-        "🔄 Automated backup and disaster recovery for monitoring data",
       ],
       achievements: [
         "Reduced mean time to detection (MTTD) by 70%",
-        "Created 15+ custom Grafana dashboards",
         "Implemented proactive alerting reducing downtime by 60%",
-        "Established comprehensive SLA monitoring",
       ],
-      githubUrl: "https://github.com/zynx0011",
+      githubUrl: "https://github.com/zynx0011/Monitoring-Dockerized-Microservice-with-Prometheus-Grafana-on-Kubernetes-via-Ansible.git",
       category: "Monitoring",
       status: "Production Ready",
       complexity: "Advanced",
     },
+    {
+      title: "CI/CD Pipeline with Jenkins, Ansible & Kubernetes",
+      subtitle: "Zero-Cloud, Manual DevOps Pipeline from Scratch",
+      description:
+        "Built a fully automated CI/CD pipeline using Jenkins, Ansible, and Kubernetes — with zero dependency on cloud services or prebuilt images.",
+      longDescription:
+        "This project demonstrates a ground-up DevOps solution where every component was manually configured, including Dockerfile-based Jenkins and Ansible containers, SSH-based communication, and a fully automated deployment pipeline to a remote Kubernetes cluster. The entire flow — from GitHub trigger to Docker build, SCP-based transfer, image loading, and `kubectl apply` — was orchestrated using Jenkins Groovy pipelines and Ansible playbooks, showcasing full control over the CI/CD process without relying on cloud or automation shortcuts.",
+      image: "/CICD.webp",
+      technologies: [
+        "Jenkins",
+        "Ansible",
+        "Docker",
+        "Kubernetes",
+        "GitHub",
+        "SSH",
+        "Groovy",
+        "CI/CD",
+        "kubectl"
+      ],
+      features: [
+        "⚙️ Custom Jenkins and Ansible containers built from scratch using Dockerfiles",
+        "🔐 SSH-based secure communication between Jenkins and Ansible",
+        "🔁 CI/CD triggered via GitHub webhooks and scripted Jenkins pipeline",
+        "🐳 Jenkins builds and saves Docker image as .tar archive",
+        "📡 Image transferred to Ansible container using SCP",
+        "📦 Ansible loads Docker image and automates deployment via kubectl",
+        "☸️ Kubernetes deployment applied from remote via Ansible",
+        "🧱 No cloud services used – pure self-managed infrastructure"
+      ],
+      achievements: [
+        "Built and deployed a real-world CI/CD pipeline without cloud or registry dependency",
+        "Integrated Jenkins, Docker, Ansible, and Kubernetes end-to-end",
+        "Mastered raw DevOps toolchain with hands-on, bottom-up setup",
+      ],
+      githubUrl: "https://github.com/zynx0011/End-to-End-CI-CD-Pipeline-with-Jenkins-Ansible-Docker-and-Kubernetes.git",
+      liveUrl: null,
+      category: "CI/CD & Orchestration",
+      status: "Production Ready",
+      complexity: "Advanced"
+    },
+    
+    {
+      title: "Automated Docker Image Deployment with Jenkins & Ansible",
+      subtitle: "Custom CI/CD Pipeline with Docker, Jenkins, SSH & Ansible",
+      description:
+        "Built a CI/CD pipeline from scratch that automates Docker image creation, transfer, and remote deployment using Jenkins, SCP, and Ansible — without using a Docker registry.",
+      longDescription:
+        "This hands-on DevOps project showcases a custom CI/CD pipeline that builds Docker images from source code using Jenkins, securely transfers them via SCP to a remote Ansible container, and deploys them using an automated Ansible playbook. The solution avoids Docker registries entirely by saving and loading `.tar` image files, while also emphasizing SSH-based automation and infrastructure-as-code practices. It demonstrates control over the full CI/CD lifecycle using only core Linux, Docker, and automation tools.",
+      image: "/Docker.webp",
+      technologies: [
+        "Docker",
+        "Jenkins",
+        "Ansible",
+        "GitHub",
+        "SSH",
+        "SCP",
+        "CI/CD",
+        "Groovy",
+        "Linux"
+      ],
+      features: [
+        "🐳 Jenkins builds Docker image from source using a custom Dockerfile",
+        "📦 Docker image saved as .tar archive to avoid using Docker registry",
+        "🔐 Secure SSH + SCP setup to transfer image to Ansible container",
+        "⚙️ Jenkins Groovy pipeline automating the entire CI/CD flow",
+        "🚀 Ansible playbook loads and runs Docker container on remote host",
+        "🧪 End-to-end deployment automation without manual intervention",
+        "📁 Custom setup without relying on prebuilt images",
+        "🛠️ Demonstrates deep understanding of DevOps workflow mechanics"
+      ],
+      achievements: [
+        "Created a fully automated pipeline without using Docker Hub or registries",
+        "Learned to handle real-world constraints like SCP limitations with Docker",
+        "Mastered integration between Jenkins, Ansible, and SSH-based deployments",
+        "Built a reusable infrastructure-ready CI/CD setup for Docker workloads"
+      ],
+      githubUrl: "https://github.com/zynx0011/Pipeline-For-Docker-Automation.git",
+      liveUrl: null,
+      category: "DevOps Automation",
+      status: "Project Complete",
+      complexity: "Advanced"
+    }
+    
+
+
+    
+    
   ]
   // ].map((project) => ({
   //   ...project,
@@ -213,7 +286,38 @@ export function Projects() {
                 <CardContent className="flex flex-col flex-1 p-6">
                   <h3 className="text-xl font-bold mb-2 text-foreground line-clamp-2">{project.title}</h3>
                   <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.description}</p>
-                  <div className="mt-auto flex gap-2">
+                  <p className="text-muted-foreground text-sm mb-1 line-clamp-3">Features:</p>
+                  <div className="flex flex-wrap gap-1 mb-4">{project.features.slice(0, 5).map((feature, index)=>{
+                    return(
+                      <Badge
+                      key={index}
+                      variant="secondary"
+                      className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default "
+                    >
+                      {feature}
+                    </Badge>
+                    )
+                  })}
+                  </div>
+                  <p className="text-muted-foreground text-sm mb-1 line-clamp-3">Achievements:</p>
+                  <div className="flex flex-wrap gap-1 mb-4">{project.achievements.slice(0, 5).map((achievement, index)=>{
+                    return(
+                      <p className="text-muted-foreground text-left text-[12px] mb-0 line-clamp-3">🔹{achievement}</p>
+                    )
+                  })}
+                  </div>
+                  <div className="mt-auto mb-6 flex flex-wrap gap-2">
+                  {project.technologies.slice(0, 10).map((tech, techIndex) => (
+                    <Badge
+                      key={techIndex}
+                      variant="secondary"
+                      className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default "
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+                  <div className="mt-auto -mb-5  flex gap-2">
                     <Button variant="outline" size="sm" className="flex-1" asChild>
                       <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4 mr-2" />

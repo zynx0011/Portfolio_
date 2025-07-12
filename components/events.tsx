@@ -17,15 +17,13 @@ This experience enriched my understanding of AWS services and reinforced my pass
   {
     title: " DevConf.IN 2025!",
     date: "Feb 28, 2025",
-    description: `🚀 My Experience at DevConf.IN 2025! 🤖🎯
+    description: `I had the privilege of attending DevConf.IN 2025, one of India’s leading open-source conferences powered by Red Hat, bringing together developers, engineers, and innovators from across the tech ecosystem.
 
-I had an incredible time attending DevConf.IN 2025—a premier open-source conference bringing together developers, engineers, and tech enthusiasts from across the industry! 🌍💻
+What I Explored & Learned:
+🔹 Participated in deep-dive sessions on Cloud Computing, DevOps, AI/ML, Platform Engineering, and even emerging fields like Quantum Computing.
+🔹 Attended hands-on workshops and live demos that showcased real-world implementations of Kubernetes and cloud-native tools.
 
-🔹 The event was packed with insightful sessions, hands-on workshops, and thought-provoking discussions on the latest advancements in Cloud, DevOps, AI/ML, Kubernetes, Quantum Computing, and Platform Engineering. 🚀
-🔹 One of the key highlights for me was exploring the Hypershift open-source project by Red Hat, it was very amazing
-🔹 Connecting with fellow open-source enthusiasts, developers, and industry leaders was truly inspiring! 🤝 It's Seeing the power of collaboration and innovation in the tech community is amazing.
-
-Congratulations to MIT World Peace University, Red Hat, and the DevConf.IN team for organizing such a fantastic event! 🙌`,
+Special thanks to Red Hat, MIT-WPU, and the entire DevConf.IN team for curating such an impactful and memorable experience! 🙌`,
     image: "/dev.jpg" // Place your event image in public/ui/
   },
 ];
