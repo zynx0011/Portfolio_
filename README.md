@@ -35,23 +35,46 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+## Deployment on Netlify
+
+This portfolio is configured for deployment on Netlify with static export.
+
+### Automatic Deployment
+1. Connect your GitHub repository to Netlify
+2. Set the build settings:
+   - Build command: `npm run build`
+   - Publish directory: `out`
+3. Deploy!
+
+### Manual Deployment
+1. Run `npm run build` to generate static files
+2. Upload the `out` directory to Netlify
+
 ## Contact Form Email Setup
 
-To enable the contact form to send emails to your inbox, add the following environment variables to your `.env.local` file in the `Portfolio_` directory:
+To enable the contact form to send emails, add the following environment variables to your Netlify deployment settings:
 
 ```
-GMAIL_USER=your_gmail@gmail.com
-GMAIL_PASS=your_gmail_app_password
-MY_EMAIL=your_gmail@gmail.com
+SMTP_HOST=your_smtp_host
+SMTP_PORT=587
+SMTP_USER=your_smtp_username
+SMTP_PASS=your_smtp_password
+CONTACT_RECEIVER_EMAIL=your@email.com
 ```
 
-- `GMAIL_USER`: Your Gmail address (sender)
-- `GMAIL_PASS`: Your Gmail App Password (not your regular password; see below)
-- `MY_EMAIL`: The email address where you want to receive messages (can be the same as `GMAIL_USER`)
+### Gmail SMTP Setup (Recommended)
+For Gmail, use these settings:
+- `SMTP_HOST`: smtp.gmail.com
+- `SMTP_PORT`: 587
+- `SMTP_USER`: your_gmail@gmail.com
+- `SMTP_PASS`: your_gmail_app_password (not your regular password)
+- `CONTACT_RECEIVER_EMAIL`: your_gmail@gmail.com
 
 ### How to get a Gmail App Password
 1. Go to your Google Account > Security > App passwords: https://myaccount.google.com/apppasswords
-2. Generate a new app password for 'Mail'.
-3. Use the generated password as `GMAIL_PASS`.
+2. Generate a new app password for 'Mail'
+3. Use the generated password as `SMTP_PASS`
 
-**Restart your dev server after adding or changing environment variables.**
+## Local Development
+
+For local development, create a `.env.local` file with the same environment variables.

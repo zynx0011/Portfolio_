@@ -1,8 +1,27 @@
 const nodemailer = require("nodemailer");
 
 exports.handler = async function(event, context) {
+  // Handle CORS
+  if (event.httpMethod === "OPTIONS") {
+    return {
+      statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "POST, OPTIONS"
+      },
+      body: ""
+    };
+  }
+
   if (event.httpMethod !== "POST") {
-    return { statusCode: 405, body: "Method Not Allowed" };
+    return { 
+      statusCode: 405, 
+      headers: {
+        "Access-Control-Allow-Origin": "*"
+      },
+      body: "Method Not Allowed" 
+    };
   }
 
   const { name, email, company, subject, message } = JSON.parse(event.body);
@@ -10,6 +29,9 @@ exports.handler = async function(event, context) {
   if (!name || !email || !subject || !message) {
     return {
       statusCode: 400,
+      headers: {
+        "Access-Control-Allow-Origin": "*"
+      },
       body: JSON.stringify({ success: false, error: "Missing required fields." }),
     };
   }
@@ -36,11 +58,17 @@ exports.handler = async function(event, context) {
     await transporter.sendMail(mailOptions);
     return {
       statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*"
+      },
       body: JSON.stringify({ success: true }),
     };
   } catch (error) {
     return {
       statusCode: 500,
+      headers: {
+        "Access-Control-Allow-Origin": "*"
+      },
       body: JSON.stringify({ success: false, error: "Failed to send email." }),
     };
   }

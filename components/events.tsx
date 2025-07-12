@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const events = [
   {
@@ -47,11 +48,13 @@ export function Events() {
               key={idx}
               className="flex flex-col md:flex-row bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-900/20 dark:to-purple-800/20 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border hover:-translate-y-2 hover:scale-[1.02] overflow-hidden"
             >
-              <img
+              <Image
                 src={event.image}
                 alt={event.title}
+                width={400}
+                height={300}
                 className="w-full md:w-1/2 h-64 md:h-auto object-contain object-center"
-                loading="lazy"
+                priority={idx === 0}
               />
               <div className="flex-1 flex flex-col p-6 justify-center">
                 <div className="text-lg font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent mb-2">

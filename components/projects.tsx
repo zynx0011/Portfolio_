@@ -300,11 +300,9 @@ export function Projects() {
                   })}
                   </div>
                   <p className="text-muted-foreground text-sm mb-1 line-clamp-3">Achievements:</p>
-                  <div className="flex flex-wrap gap-1 mb-4">{project.achievements.slice(0, 5).map((achievement, index)=>{
-                    return(
-                      <p className="text-muted-foreground text-left text-[12px] mb-0 line-clamp-3">🔹{achievement}</p>
-                    )
-                  })}
+                  <div className="flex flex-wrap gap-1 mb-4">{project.achievements.slice(0, 5).map((achievement, achievementIndex) => (
+                    <p key={achievementIndex} className="text-muted-foreground text-left text-[12px] mb-0 line-clamp-3">🔹{achievement}</p>
+                  ))}
                   </div>
                   <div className="mt-auto mb-6 flex flex-wrap gap-2">
                   {project.technologies.slice(0, 10).map((tech, techIndex) => (

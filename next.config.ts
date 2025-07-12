@@ -10,6 +10,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
   eslint: {
     // Only run ESLint during builds for these directories
     dirs: ['app', 'pages', 'components', 'lib'],
