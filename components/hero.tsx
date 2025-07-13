@@ -48,14 +48,14 @@ export function Hero() {
         </div>
       </div> */}
        <div className="absolute left-1/2 top-0 w-full max-w-3xl -translate-x-1/2 z-10 flex flex-col items-center">
-    <div className="w-full h-40 sm:h-48 md:h-56 rounded-b-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 shadow-lg flex flex-col items-center justify-center animate-gradient-shift relative">
+    <div className="w-full h-45 sm:h-48  md:h-56 rounded-b-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 shadow-lg flex flex-col items-center justify-center animate-gradient-shift relative">
       {/* Quote Text */}
-      <span className="text-lg sm:text-xl md:text-2xl font-semibold text-white text-center drop-shadow-lg opacity-90 mb-2">
+      <span className="text-lg mt-10 sm:mt-0 sm:text-xl md:text-2xl font-semibold text-white text-center drop-shadow-lg opacity-90 mb-2">
         &quot;The harder you work for something, <br /> the greater you&apos;ll feel when you achieve it.&quot;
       </span>
       
       {/* Social Icons - Bottom Right of the banner */}
-      <div className="flex justify-end space-x-2 absolute bottom-4 right-4 animate-fade-in-up">
+      <div className="flex justify-end space-x-2 hidden sm:flex absolute bottom-4 right-4 animate-fade-in-up">
         <Link
           href="https://github.com/zynx0011"
           className="text-white/80 hover:text-white transition-all duration-300 hover:scale-125 group animate-float"
@@ -156,14 +156,14 @@ export function Hero() {
           </div>
 
           {/* Location and Status */}
-          <div className="flex items-center justify-center gap-90 mb-6 -mt-25 text-muted-foreground">
+          <div className="flex items-center justify-center gap-90 mb-6 ml-10 -mt-25 text-muted-foreground">
+            <div className="flex items-center gap-2  ">
+              <Calendar className="h-4 w-4 text-green-500" />
+              <span className="text-green-600 font-medium">Open to work</span>
+            </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4 text-blue-500" />
               <span>Pune, Maharashtra, India</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="h-4 w-4 text-green-500" />
-              <span className="text-green-600 font-medium">Open to work</span>
             </div>
           </div>
 

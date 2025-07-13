@@ -292,10 +292,11 @@ export function Projects() {
                       <Badge
                       key={index}
                       variant="secondary"
-                      className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default "
+                      className="justify-start text-left w-full hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
                     >
                       {feature}
                     </Badge>
+                    
                     )
                   })}
                   </div>
